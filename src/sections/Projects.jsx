@@ -24,6 +24,7 @@ export default function Projects() {
             <Grid key={project.id} size={{ xs: 12, md: 6 }}>
               <ProjectCard
                 project={project}
+                projectPath={project.slug ? `/projects/${project.slug}` : undefined}
                 imagePlaceholder={t("projects.imagePlaceholder")}
                 imageAriaLabel={`${t("projects.imagePlaceholderFor")} ${project.title}`}
                 revealDelay={index * 80}

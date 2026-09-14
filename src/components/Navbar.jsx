@@ -9,6 +9,7 @@ import {
 import LanguageSelector from "./LanguageSelector";
 import ThemeToggle from "./ThemeToggle";
 import useLanguage from "../contexts/useLanguage";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const navigationItems = [
   { labelKey: "navigation.projects", sectionId: "projects" },
@@ -19,6 +20,17 @@ const navigationItems = [
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  function navigateToSection(sectionId) {
+    if (location.pathname === "/") {
+      document.getElementById(sectionId)?.scrollIntoView();
+      return;
+    }
+
+    navigate("/", { state: { scrollTo: sectionId } });
+  }
 
   return (
     <AppBar
@@ -65,8 +77,7 @@ export default function Navbar() {
               {navigationItems.map((navigationItem) => (
                 <Button
                   key={navigationItem.sectionId}
-                  component="a"
-                  href={`#${navigationItem.sectionId}`}
+                  onClick={() => navigateToSection(navigationItem.sectionId)}
                   color="inherit"
                   sx={{
                     minWidth: "auto",

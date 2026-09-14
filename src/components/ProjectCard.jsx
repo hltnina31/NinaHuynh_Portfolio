@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function ProjectCard({
   project,
   imagePlaceholder,
   imageAriaLabel,
   revealDelay = 0,
+  projectPath,
 }) {
   const cardRef = useRef(null);
   const [isInViewport, setIsInViewport] = useState(
@@ -48,10 +50,14 @@ export default function ProjectCard({
       }}
     >
       <Card
-        component="article"
+        component={projectPath ? RouterLink : "article"}
+        to={projectPath}
         variant="outlined"
         sx={{
           height: "100%",
+          display: "block",
+          color: "inherit",
+          textDecoration: "none",
           boxShadow: 2,
           transform: "translateY(0) scale(1)",
           transition:

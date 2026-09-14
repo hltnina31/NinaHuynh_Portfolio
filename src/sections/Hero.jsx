@@ -8,6 +8,10 @@ export default function Hero() {
   const { language, t } = useLanguage();
   const emailLink = createEmailLink(t("contact.emailSubject"));
 
+  function scrollToProjects() {
+    document.getElementById("projects")?.scrollIntoView();
+  }
+
   return (
     <Box
       component="section"
@@ -46,7 +50,7 @@ export default function Hero() {
                 </Typography>
 
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
-                <Button component="a" href="#projects" variant="contained">
+                <Button onClick={scrollToProjects} variant="contained">
                     {t("hero.projectsButton")}
                 </Button>
 

@@ -40,9 +40,11 @@ const vn = {
     imagePlaceholderFor: "Vị trí hình ảnh cho",
     items: [
       {
-        id: "placeholder-project-1",
-        title: "Dự án một",
-        description: "Phần giới thiệu ngắn về dự án sẽ được thêm tại đây.",
+        id: "bachelor-tingtun",
+        slug: "bachelor-tingtun",
+        title: "Cấu trúc hóa phản hồi sự kiện kiểm thử bằng AI",
+        description:
+          "Dự án cử nhân hợp tác với Tingtun, trong đó chúng tôi phát triển một giải pháp dựa trên AI để phân tích, cấu trúc hóa phản hồi và đề xuất cải tiến.",
       },
       {
         id: "placeholder-project-2",
@@ -55,6 +57,121 @@ const vn = {
         description: "Phần giới thiệu ngắn về dự án sẽ được thêm tại đây.",
       },
     ],
+  },
+  projectCaseStudies: {
+    bachelorTingtun: {
+      backToProjects: "Quay lại dự án",
+      title: "Cấu trúc hóa phản hồi sự kiện kiểm thử bằng AI",
+      subtitle: "Dự án cử nhân hợp tác với Tingtun",
+      period: "Tháng 1 năm 2026 – tháng 6 năm 2026",
+      roles: ["Quản lý dự án", "Scrum Master", "Lập trình viên full-stack"],
+      techStackHeading: "Công nghệ",
+      galleryControls: {
+        openFullImage: "Mở hình ảnh ở kích thước đầy đủ",
+        closeFullImage: "Đóng hình ảnh",
+      },
+      overview: {
+        heading: "Tổng quan dự án",
+        body: "Hợp tác với Tingtun, chúng tôi phát triển một giải pháp dựa trên AI có khả năng phân tích phản hồi từ các đơn vị sở hữu dịch vụ và đề xuất cải tiến dựa trên nội dung. Đây là dự án cử nhân tại Đại học Agder, được thực hiện từ tháng 1 đến tháng 6 năm 2026 bởi một nhóm năm người.",
+      },
+      problem: {
+        heading: "Vấn đề",
+        body: "Tingtun mong muốn một giải pháp giúp việc quản lý và phân tích phản hồi từ các đơn vị sở hữu dịch vụ trở nên dễ dàng hơn. Phản hồi có thể chứa lượng thông tin lớn, vì vậy mục tiêu là tìm hiểu cách trí tuệ nhân tạo có thể hỗ trợ cấu trúc hóa nội dung và đề xuất những cải tiến phù hợp.",
+      },
+      designProcess: {
+        heading: "Quy trình thiết kế",
+        body: "Tôi tham gia thiết kế giải pháp và sử dụng Figma trong quá trình thiết kế. Nhóm dùng công việc này để khám phá cấu trúc, luồng người dùng và cách trình bày rõ ràng những thông tin đã được phân tích.",
+        gallery: {
+          ariaLabel: "Hình ảnh quy trình thiết kế",
+          items: {
+            wireframe: {
+              alt: "Wireframe thể hiện cấu trúc ban đầu và luồng người dùng của giải pháp Tingtun",
+              caption: "Bố cục ban đầu được dùng để xác định cấu trúc tổng thể và luồng người dùng.",
+            },
+            mockup: {
+              alt: "Mockup thể hiện thiết kế trực quan của giải pháp Tingtun",
+              caption: "Bản hoàn thiện trực quan tập trung vào bố cục, phân cấp và thiết kế giao diện.",
+            },
+            prototype: {
+              alt: "Nguyên mẫu tương tác của giải pháp Tingtun trước khi bắt đầu phát triển",
+              caption: "Nguyên mẫu tương tác được sử dụng trước khi quá trình phát triển bắt đầu.",
+            },
+          },
+        },
+      },
+      solution: {
+        heading: "Giải pháp",
+        body: "Chúng tôi phát triển một giải pháp full-stack, trong đó React.js xử lý giao diện người dùng còn Node.js xử lý các yêu cầu và giao tiếp với những dịch vụ bên ngoài. Người dùng có thể gửi phản hồi qua ứng dụng; phản hồi sau đó được chuyển đến Gemini API để phân tích, cấu trúc hóa và đề xuất cải tiến. GitHub API kết nối kết quả với GitHub Issues để các vấn đề có thể được tạo, theo dõi và quản lý trong một quy trình làm việc sẵn có.",
+      },
+      architecture: {
+        heading: "Lựa chọn kiến trúc",
+        introduction: "Tôi đề xuất với nhóm sử dụng GitHub Issues thông qua GitHub API thay vì xây dựng một cơ sở dữ liệu và hệ thống quản lý vấn đề tùy chỉnh hoàn chỉnh. GitHub Issues đã cung cấp chức năng để:",
+        features: ["tạo vấn đề", "bình luận", "mở vấn đề", "đóng vấn đề", "theo dõi trạng thái vấn đề"],
+        conclusion: "Lựa chọn kỹ thuật này giảm độ phức tạp không cần thiết và cho phép nhóm tập trung nhiều hơn vào chức năng AI và trải nghiệm người dùng. Đề xuất là đóng góp của tôi vào quá trình ra quyết định kỹ thuật, còn kiến trúc được phát triển chung với các thành viên còn lại.",
+      },
+      role: {
+        heading: "Vai trò của tôi",
+        areas: [
+          {
+            heading: "Quản lý dự án",
+            items: ["Lập kế hoạch họp", "Theo dõi tiến độ", "Góp phần phân chia nhiệm vụ rõ ràng", "Trao đổi với nhóm, khách hàng và giảng viên hướng dẫn"],
+          },
+          {
+            heading: "Scrum Master",
+            items: ["Điều hành họp đứng hằng ngày", "Hỗ trợ lập kế hoạch sprint", "Đảm bảo mọi người cùng hiểu mục tiêu", "Tạo điều kiện thảo luận và ra quyết định chung"],
+          },
+          {
+            heading: "Lập trình viên",
+            items: ["Phát triển frontend và backend", "Tích hợp GitHub API và Gemini API", "Kiểm thử", "Đóng góp vào quy trình pull request"],
+          },
+        ],
+      },
+      result: {
+        heading: "Kết quả",
+        body: "Dự án tạo ra một nguyên mẫu hoạt động được, minh họa cách AI có thể hỗ trợ phân tích và cấu trúc hóa phản hồi.",
+        gallery: {
+          ariaLabel: "Hình ảnh kết quả dự án hoàn chỉnh",
+          items: {
+            home: {
+              alt: "Trang chủ của ứng dụng Tingtun",
+              caption: "Trang chủ là màn hình đầu tiên người dùng nhìn thấy và là điểm truy cập vào giải pháp.",
+            },
+            form: {
+              alt: "Biểu mẫu gửi phản hồi trong ứng dụng Tingtun",
+              caption: "Người dùng nhập phản hồi cần được phân tích.",
+            },
+            loading: {
+              alt: "Trạng thái tải trong khi phản hồi đang được phân tích",
+              caption: "Trong khi phản hồi được phân tích, trạng thái tải được hiển thị lúc AI tạo kết quả.",
+            },
+            analyse: {
+              alt: "Bản phân tích do AI tạo cùng các đề xuất cải tiến",
+              caption: "AI phân tích phản hồi đã gửi và tạo ra các đề xuất cải tiến.",
+            },
+            edit: {
+              alt: "Chỉnh sửa phản hồi đã gửi trước khi tạo bản phân tích mới",
+              caption: "Người dùng có thể chỉnh sửa phản hồi đã gửi và tạo một bản phân tích mới.",
+            },
+            sending: {
+              alt: "Gửi vấn đề đã xem xét sang GitHub",
+              caption: "Sau khi xem xét, người dùng có thể gửi vấn đề sang GitHub.",
+            },
+            github: {
+              alt: "Vấn đề đã gửi được tạo thành một GitHub Issue",
+              caption: "Vấn đề đã gửi được tạo thành một GitHub Issue, nơi có thể bình luận, theo dõi, mở và đóng vấn đề.",
+            },
+            contact: {
+              alt: "Tính năng liên hệ qua email",
+              caption: "Tính năng liên hệ cho phép người dùng liên lạc qua email.",
+            },
+          },
+        },
+      },
+      learning: {
+        heading: "Những điều tôi học được",
+        body: "Dự án giúp tôi học cách kết hợp phát triển phần mềm với quản lý dự án, giao tiếp với khách hàng thực tế và cộng tác trong nhóm năm người. Tôi tích lũy thêm kinh nghiệm về tích hợp API và ra quyết định kỹ thuật, đồng thời học cách thích nghi khi giải pháp dự kiến không hoạt động như mong đợi. Một phần quan trọng của trải nghiệm là cân bằng công việc kỹ thuật với điều phối, giao tiếp và duy trì tiến độ.",
+      },
+    },
   },
   skills: {
     heading: "Kỹ năng",

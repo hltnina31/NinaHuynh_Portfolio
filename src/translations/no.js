@@ -40,9 +40,11 @@ const no = {
     imagePlaceholderFor: "Bildeplassholder for",
     items: [
       {
-        id: "placeholder-project-1",
-        title: "Prosjekt én",
-        description: "En kort introduksjon til prosjektet kommer her.",
+        id: "bachelor-tingtun",
+        slug: "bachelor-tingtun",
+        title: "KI-basert strukturering av testfest-tilbakemeldinger",
+        description:
+          "Bachelorprosjekt i samarbeid med Tingtun, hvor vi utviklet en KI-basert løsning for å analysere og strukturere tilbakemeldinger og foreslå forbedringer.",
       },
       {
         id: "placeholder-project-2",
@@ -55,6 +57,127 @@ const no = {
         description: "En kort introduksjon til prosjektet kommer her.",
       },
     ],
+  },
+  projectCaseStudies: {
+    bachelorTingtun: {
+      backToProjects: "Tilbake til prosjekter",
+      title: "KI-basert strukturering av testfest-tilbakemeldinger",
+      subtitle: "Bachelorprosjekt i samarbeid med Tingtun",
+      period: "Januar 2026 – juni 2026",
+      roles: ["Prosjektleder", "Scrum Master", "Fullstack-utvikler"],
+      techStackHeading: "Teknologier",
+      galleryControls: {
+        openFullImage: "Åpne bildet i full størrelse",
+        closeFullImage: "Lukk bildet",
+      },
+      overview: {
+        heading: "Prosjektoversikt",
+        body: "I samarbeid med Tingtun utviklet vi en KI-basert løsning som analyserer tilbakemeldinger fra tjenesteeiere og foreslår forbedringer basert på innholdet. Prosjektet ble gjennomført som bachelorprosjekt ved Universitetet i Agder i perioden januar til juni 2026, i et team på fem personer.",
+      },
+      problem: {
+        heading: "Problemet",
+        body: "Tingtun ønsket en løsning som kunne gjøre det enklere å håndtere og analysere tilbakemeldinger fra tjenesteeiere. Tilbakemeldingene kunne inneholde mye informasjon, og målet var å undersøke hvordan kunstig intelligens kunne bidra til å strukturere innholdet og foreslå relevante forbedringer.",
+      },
+      designProcess: {
+        heading: "Designprosessen",
+        body: "Jeg bidro til utformingen av løsningen og arbeidet med Figma som en del av designprosessen. Teamet brukte designarbeidet til å utforske struktur, brukerflyt og hvordan den analyserte informasjonen kunne presenteres tydelig.",
+        gallery: {
+          ariaLabel: "Bilder fra designprosessen",
+          items: {
+            wireframe: {
+              alt: "Wireframe som viser den første strukturen og brukerflyten i Tingtun-løsningen",
+              caption: "Den første layouten som ble brukt til å definere den overordnede strukturen og brukerflyten.",
+            },
+            mockup: {
+              alt: "Mockup som viser den visuelle utformingen av Tingtun-løsningen",
+              caption: "En visuell videreutvikling med fokus på layout, hierarki og grensesnittdesign.",
+            },
+            prototype: {
+              alt: "Interaktiv prototype av Tingtun-løsningen før utviklingsstart",
+              caption: "Den interaktive prototypen som ble brukt før utviklingen startet.",
+            },
+          },
+        },
+      },
+      solution: {
+        heading: "Løsningen",
+        body: "Vi utviklet en fullstack-løsning der React.js håndterte brukergrensesnittet, mens Node.js behandlet forespørsler og kommunikasjon med eksterne tjenester. Brukeren kunne sende inn tilbakemeldinger i løsningen, som deretter ble sendt til Gemini API for analyse, strukturering og forslag til forbedringer. GitHub API koblet resultatet til GitHub Issues, slik at saker kunne opprettes, følges opp og håndteres videre i en etablert arbeidsflyt.",
+      },
+      architecture: {
+        heading: "Arkitekturvalg",
+        introduction: "Jeg foreslo for teamet å bruke GitHub Issues gjennom GitHub API i stedet for å bygge en komplett egen database og et eget saksbehandlingssystem. GitHub Issues hadde allerede funksjonalitet for:",
+        features: [
+          "å opprette saker",
+          "å kommentere",
+          "å åpne saker",
+          "å lukke saker",
+          "å følge statusen til saker",
+        ],
+        conclusion: "Dette tekniske valget reduserte unødvendig kompleksitet og lot teamet bruke mer tid på KI-funksjonaliteten og brukeropplevelsen. Forslaget var mitt bidrag til teamets tekniske beslutningsprosess, mens arkitekturen ble videreutviklet i samarbeid med resten av teamet.",
+      },
+      role: {
+        heading: "Min rolle",
+        areas: [
+          {
+            heading: "Prosjektleder",
+            items: ["Planla møter", "Fulgte opp fremdrift", "Bidro til tydelig oppgavefordeling", "Kommuniserte med team, oppdragsgiver og veileder"],
+          },
+          {
+            heading: "Scrum Master",
+            items: ["Ledet daglige standups", "La til rette for sprintplanlegging", "Sørget for felles forståelse av målene", "La til rette for diskusjon og felles beslutninger"],
+          },
+          {
+            heading: "Utvikler",
+            items: ["Frontend- og backend-utvikling", "API-integrasjoner med GitHub API og Gemini API", "Testing", "Bidro til pull request-arbeidsflyten"],
+          },
+        ],
+      },
+      result: {
+        heading: "Resultat",
+        body: "Prosjektet resulterte i en funksjonell prototype som demonstrerte hvordan KI kan støtte analyse og strukturering av tilbakemeldinger.",
+        gallery: {
+          ariaLabel: "Bilder av det ferdige prosjektresultatet",
+          items: {
+            home: {
+              alt: "Hjemmesiden i Tingtun-applikasjonen",
+              caption: "Hjemmesiden er det første brukeren møter og gir en inngang til løsningen.",
+            },
+            form: {
+              alt: "Skjema for å sende inn tilbakemelding i Tingtun-applikasjonen",
+              caption: "Brukeren fyller inn tilbakemeldingen som skal analyseres.",
+            },
+            loading: {
+              alt: "Loading-tilstand mens tilbakemeldingen analyseres",
+              caption: "Mens tilbakemeldingen analyseres, vises en loading-tilstand mens KI-en genererer resultatet.",
+            },
+            analyse: {
+              alt: "KI-generert analyse med forslag til forbedringer",
+              caption: "KI-en analyserer den innsendte tilbakemeldingen og genererer forslag til forbedringer.",
+            },
+            edit: {
+              alt: "Redigering av tilbakemelding før en ny analyse",
+              caption: "Brukeren kan redigere den innsendte tilbakemeldingen og generere en ny analyse.",
+            },
+            sending: {
+              alt: "Sending av den gjennomgåtte saken til GitHub",
+              caption: "Etter gjennomgang kan brukeren sende saken videre til GitHub.",
+            },
+            github: {
+              alt: "Den innsendte saken som et GitHub Issue",
+              caption: "Den innsendte saken opprettes som et GitHub Issue, hvor den kan kommenteres, følges opp, åpnes og lukkes.",
+            },
+            contact: {
+              alt: "Kontaktfunksjon for å sende e-post",
+              caption: "Kontaktfunksjonen lar brukeren ta kontakt via e-post.",
+            },
+          },
+        },
+      },
+      learning: {
+        heading: "Hva jeg lærte",
+        body: "Prosjektet lærte meg å kombinere utvikling og prosjektledelse, kommunisere med en reell oppdragsgiver og samarbeide i et team på fem personer. Jeg fikk dypere erfaring med API-integrasjoner og tekniske beslutninger, samtidig som jeg lærte å tilpasse arbeidet når planlagte løsninger ikke fungerte som forventet. En viktig del av erfaringen var å balansere teknisk arbeid med koordinering, kommunikasjon og jevn fremdrift.",
+      },
+    },
   },
   skills: {
     heading: "Ferdigheter",

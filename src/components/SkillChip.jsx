@@ -1,6 +1,46 @@
 import { Chip, Fade, Tooltip } from "@mui/material";
 
 export default function SkillChip({ label, description }) {
+  const chip = (
+    <Chip
+      label={label}
+      size="small"
+      tabIndex={0}
+      sx={{
+        width: "fit-content",
+        maxWidth: "100%",
+        height: 30,
+        flex: "0 0 auto",
+        bgcolor: "primary.light",
+        "& .MuiChip-label": {
+          whiteSpace: "nowrap",
+        },
+        transition:
+          "transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease",
+        "&:hover, &:focus-visible": {
+          transform: "translateY(-2px)",
+          boxShadow: 2,
+          bgcolor: "primary.dark",
+        },
+        "&:focus-visible": {
+          outline: "2px solid",
+          outlineColor: "primary.dark",
+          outlineOffset: 2,
+        },
+        "@media (prefers-reduced-motion: reduce)": {
+          transition: "none",
+          "&:hover, &:focus-visible": {
+            transform: "none",
+          },
+        },
+      }}
+    />
+  );
+
+  if (!description) {
+    return chip;
+  }
+
   return (
     <Tooltip
       title={description}
@@ -21,39 +61,7 @@ export default function SkillChip({ label, description }) {
         },
       }}
     >
-      <Chip
-        label={label}
-        size="small"
-        tabIndex={0}
-        sx={{
-          width: "fit-content",
-          maxWidth: "100%",
-          height: 30,
-          flex: "0 0 auto",
-          bgcolor: "primary.light",
-          "& .MuiChip-label": {
-            whiteSpace: "nowrap",
-          },
-          transition:
-            "transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease",
-          "&:hover, &:focus-visible": {
-            transform: "translateY(-2px)",
-            boxShadow: 2,
-            bgcolor: "primary.dark",
-          },
-          "&:focus-visible": {
-            outline: "2px solid",
-            outlineColor: "primary.dark",
-            outlineOffset: 2,
-          },
-          "@media (prefers-reduced-motion: reduce)": {
-            transition: "none",
-            "&:hover, &:focus-visible": {
-              transform: "none",
-            },
-          },
-        }}
-      />
+      {chip}
     </Tooltip>
   );
 }
