@@ -2,6 +2,7 @@ import { Box, Container, Grid } from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
 import SectionHeader from "../components/SectionHeader";
 import useLanguage from "../contexts/useLanguage";
+import { findProjectBySlug } from "../data/projects";
 
 export default function Projects() {
   const { t } = useLanguage();
@@ -20,17 +21,28 @@ export default function Projects() {
         />
 
         <Grid container spacing={4} sx={{ mt: 5 }}>
-          {projects.map((project, index) => (
-            <Grid key={project.id} size={{ xs: 12, md: 6 }}>
-              <ProjectCard
-                project={project}
-                projectPath={project.slug ? `/projects/${project.slug}` : undefined}
-                imagePlaceholder={t("projects.imagePlaceholder")}
-                imageAriaLabel={`${t("projects.imagePlaceholderFor")} ${project.title}`}
-                revealDelay={index * 80}
-              />
-            </Grid>
-          ))}
+          {projects.map((project, index) => {
+            const projectConfig = project.slug
+              ? findProjectBySlug(project.slug)
+              : undefined;
+
+            return (
+              <Grid key={project.id} size={{ xs: 12, md: 6 }}>
+                <ProjectCard
+                  project={project}
+                  projectPath={project.slug ? `/projects/${project.slug}` : undefined}
+                  image={projectConfig?.cardImage}
+                  imagePlaceholder={t("projects.imagePlaceholder")}
+                  imageAriaLabel={
+                    projectConfig?.cardImage
+                      ? project.title
+                      : `${t("projects.imagePlaceholderFor")} ${project.title}`
+                  }
+                  revealDelay={index * 80}
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </Box>

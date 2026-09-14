@@ -14,6 +14,7 @@ const projects = [
   {
     slug: "bachelor-tingtun",
     translationKey: "projectCaseStudies.bachelorTingtun",
+    cardImage: mockupTingtun,
     technologies: [
       "React.js",
       "Node.js",

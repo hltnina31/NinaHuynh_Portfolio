@@ -4,6 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 export default function ProjectCard({
   project,
+  image,
   imagePlaceholder,
   imageAriaLabel,
   revealDelay = 0,
@@ -74,15 +75,29 @@ export default function ProjectCard({
           },
         }}
       >
-        <Box
-          role="img"
-          aria-label={imageAriaLabel}
-          sx={{ aspectRatio: "16 / 9", display: "grid", placeItems: "center" }}
-        >
-          <Typography variant="body2" color="text.secondary">
-            {imagePlaceholder}
-          </Typography>
-        </Box>
+        {image ? (
+          <Box
+            component="img"
+            src={image}
+            alt={imageAriaLabel}
+            sx={{
+              display: "block",
+              width: "100%",
+              aspectRatio: "16 / 9",
+              objectFit: "cover",
+            }}
+          />
+        ) : (
+          <Box
+            role="img"
+            aria-label={imageAriaLabel}
+            sx={{ aspectRatio: "16 / 9", display: "grid", placeItems: "center" }}
+          >
+            <Typography variant="body2" color="text.secondary">
+              {imagePlaceholder}
+            </Typography>
+          </Box>
+        )}
 
         <CardContent>
           <Stack spacing={2}>
