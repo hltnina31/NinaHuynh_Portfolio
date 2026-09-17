@@ -48,13 +48,13 @@ const en = {
       },
       {
         id: "placeholder-project-2",
-        title: "Project two",
-        description: "A short introduction to the project will be added here.",
+        title: "More projects coming soon",
+        description: "I'm working on new projects that will be added here soon.",
       },
       {
         id: "placeholder-project-3",
-        title: "Project three",
-        description: "A short introduction to the project will be added here.",
+        title: "More projects coming soon",
+        description: "I'm working on new projects that will be added here soon.",
       },
     ],
   },

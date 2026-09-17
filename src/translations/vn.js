@@ -48,13 +48,13 @@ const vn = {
       },
       {
         id: "placeholder-project-2",
-        title: "Dự án hai",
-        description: "Phần giới thiệu ngắn về dự án sẽ được thêm tại đây.",
+        title: "Sắp có thêm nhiều dự án",
+        description: "Tôi đang thực hiện các dự án mới và sẽ sớm cập nhật tại đây.",
       },
       {
         id: "placeholder-project-3",
-        title: "Dự án ba",
-        description: "Phần giới thiệu ngắn về dự án sẽ được thêm tại đây.",
+        title: "Sắp có thêm nhiều dự án",
+        description: "Tôi đang thực hiện các dự án mới và sẽ sớm cập nhật tại đây.",
       },
     ],
   },

@@ -48,13 +48,13 @@ const no = {
       },
       {
         id: "placeholder-project-2",
-        title: "Prosjekt to",
-        description: "En kort introduksjon til prosjektet kommer her.",
+        title: "Flere prosjekter kommer snart",
+        description: "Jeg jobber med nye prosjekter som snart vil bli lagt til her.",
       },
       {
         id: "placeholder-project-3",
-        title: "Prosjekt tre",
-        description: "En kort introduksjon til prosjektet kommer her.",
+        title: "Flere prosjekter kommer snart",
+        description: "Jeg jobber med nye prosjekter som snart vil bli lagt til her.",
       },
     ],
   },

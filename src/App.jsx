@@ -11,6 +11,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Timeline from "./sections/Timeline";
 import ProjectPage from "./pages/ProjectPage";
+import RouteScrollReset from "./components/RouteScrollReset";
 
 function SiteLayout() {
   return (
@@ -48,6 +49,7 @@ function HomePage() {
 function App() {
   return (
     <HashRouter>
+      <RouteScrollReset />
       <Routes>
         <Route element={<SiteLayout />}>
           <Route index element={<HomePage />} />
